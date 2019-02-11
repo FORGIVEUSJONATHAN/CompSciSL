@@ -9,7 +9,7 @@ public class PairofDice {
          Dice2=(int) (Math.random()*6)+1;
 
     }
-    public Boolean  Roll2Dice(String name, int number){
+    public Boolean  Roll2Dice(){
          Dice1=(int) (Math.random()*6)+1;
          Dice2=(int) (Math.random()*6)+1;
          int Sum = Dice1+Dice2;

@@ -7,12 +7,23 @@ public class DiceGame7 {
         Scanner in = new Scanner(System.in);
         PairofDice Player1 = new PairofDice();
         PairofDice Player2 = new PairofDice();
-        PairofDice Player3 = new PairofDice();
-        while(Player1.Roll2Dice("Jonathan",0120) == false){
-            System.out.println("the number of the count is "+Player1.GetCount());
+        while(Player1.Roll2Dice() == false){
         }
+        System.out.println("the number of the count for player 1 is "+Player1.GetCount());
 
+        while(Player2.Roll2Dice()==false){
+        }
+        System.out.println("the number of the count for player 2 is "+Player2.GetCount());
 
+        if(Player1.GetCount()>Player2.GetCount()){
+            System.out.println("Player2 wins");
+        }
+        else if(Player1.GetCount()<Player2.GetCount()){
+            System.out.println("Player1 wins");
+        }
+        else {
+            System.out.println("Both win");
+        }
     }
 
 
