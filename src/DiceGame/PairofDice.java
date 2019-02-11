@@ -3,7 +3,7 @@ package DiceGame;
 public class PairofDice {
     private int Dice1;
     private int Dice2;
-    private int Count;
+    private int Count=0;
     public PairofDice(){
          Dice1=(int) (Math.random()*6)+1;
          Dice2=(int) (Math.random()*6)+1;

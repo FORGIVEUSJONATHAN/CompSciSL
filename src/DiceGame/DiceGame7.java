@@ -7,6 +7,7 @@ public class DiceGame7 {
         Scanner in = new Scanner(System.in);
         PairofDice Player1 = new PairofDice();
         PairofDice Player2 = new PairofDice();
+
         while(Player1.Roll2Dice()!=7){
         }
         System.out.println("the number of the count for player 1 is "+Player1.GetCount());
@@ -25,5 +26,5 @@ public class DiceGame7 {
             System.out.println("Both win");
         }
     }
-    
+
 }
