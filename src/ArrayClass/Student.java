@@ -3,11 +3,9 @@ package ArrayClass;
 public class Student {
     private String name;
     private int[] score= new int[5];
-    public  Student (String name){
+    public  Student (String name,int[]score){
         this.name=name;
-        for(int i=0;i<5;i++) {
-            this.score[i]=(int) (Math.random() * 7) + 1;
-        }
+        this.score =score;
     }
     public String getName(){
         return this.name;

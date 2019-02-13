@@ -6,13 +6,14 @@ public class StudentMain {
     public static void main(String arg[]){
         Scanner in = new Scanner(System.in);
         Student[] Studs =  new Student[5];
-        String name;
+         int[] score= new int[5];
+
         for(int i=0;i<5;i++){
             System.out.print("please input the name of the student");
-            name=in.next();
-            for(int j =0;j<5;j++) {
-                Studs[i] = new Student(name);
+            for(int j=0;j<5;j++) {
+                score[i]=(int) (Math.random() * 7) + 1;
             }
+                Studs[i] = new Student(in.next(),score);
         }
         System.out.println("Name\tScore1\tScore2\tScore3\tScore4\tScore5");
 
