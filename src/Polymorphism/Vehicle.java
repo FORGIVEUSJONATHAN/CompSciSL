@@ -1,7 +1,4 @@
 package Polymorphism;
-
-
-
 import java.util.Scanner;
 
 public class Vehicle {
@@ -36,25 +33,31 @@ public class Vehicle {
     public static void main(String arg[]){
         Scanner in = new Scanner(System.in);
         Vehicle[] V =  new Vehicle[10];
+        Owner[] O = new Owner[10];
         boolean x =true;
-        while(x=true) {
             for (int i = 0; i < 10; i++) {
-                System.out.println("plz input the type of car");
-                switch (in.nextInt()) {
-                    case 1:
-                        V[i] = new Car(in.next(), in.nextInt(), in.nextInt());
-                    case 2:
-                        V[i] = new Truck(in.next(), in.nextInt(), in.nextInt());
-                    case 3:
-                        V[i] = new Bus(in.next(), in.nextInt(), in.nextInt());
-                    case 4:
-                        V[i] = new Motorbike(in.next(), in.nextInt(), in.nextBoolean());
-                    default:
-                        x=false;
-                        break;
+                while (x) {
+                    O[i]= new Owner(in.next(),in.nextInt());
+                    System.out.println("plz input the type of car");
+                    switch (in.nextInt()) {
+                        case 1:
+                            V[i] = new Car(in.next(), in.nextInt(), in.nextInt());
+                            break;
+                        case 2:
+                            V[i] = new Truck(in.next(), in.nextInt(), in.nextInt());
+                            break;
+                        case 3:
+                            V[i] = new Bus(in.next(), in.nextInt(), in.nextInt());
+                            break;
+                        case 4:
+                            V[i] = new Motorbike(in.next(), in.nextInt(), in.nextBoolean());
+                            break;
+                        default:
+                            x = false;
+                            break;
+                    }
                 }
             }
-        }
     }
 
 }
@@ -67,6 +70,7 @@ class Car extends Vehicle{
         super(color,regNo);
         this.numDoors=numDoors;
     }
+
     public int getNumDoors() {
         return numDoors;
     }

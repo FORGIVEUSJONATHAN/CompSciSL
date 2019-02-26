@@ -10,5 +10,17 @@ public class Owner extends Vehicle{
     Owner(){
 
     }
+    public void setName(String name){
+        this.name=name;
+    }
+    public void setDrivinglic(int drivinglic) {
+        this.drivinglic = drivinglic;
+    }
+    public String getName() {
+        return name;
+    }
+    public int getDrivinglic() {
+        return drivinglic;
+    }
 
 }
